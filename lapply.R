@@ -71,3 +71,14 @@ select_second <- function(x){
   x[2]
 }
 lapply(split_low,select_second)
+
+## anonymous functions for simplicity
+lapply(split_low,function(x){x[1]})
+lapply(split_low,function(x){x[2]})
+
+## additional arguments in the function
+select_el<- function(x,index){
+  x[index]
+}
+lapply(split_low,select_el,index=1)
+lapply(split_low,select_el,index=2)
