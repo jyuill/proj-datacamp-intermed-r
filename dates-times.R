@@ -43,3 +43,28 @@ days2
 
 # works the same with POSIXct except values are seconds
 # R will convert to understandable time unit when seconds are large
+
+### Date symbols
+# %Y - 4 digit yr
+# %y - 2 digit yr
+# %m - 2 digit mth
+# %d - 2 digit day
+# %A - weekday
+# %a - 3 letter abbrev weekday
+# %B - month 
+# %b - 3 letter abbrev mth
+
+# Definition of character strings representing dates
+str1 <- "May 23, '96"
+str2 <- "2012-03-15"
+str3 <- "30/January/2006"
+
+# Convert the strings to dates: date1, date2, date3
+date1 <- as.Date(str1, format = "%b %d, '%y")
+date2 <- as.Date(str2)
+date3 <- as.Date(str3, format="%d/%B/%Y")
+
+# Convert dates to formatted strings
+format(date1, "%A")
+format(date2, "%d")
+format(date3, "%b-%y")
